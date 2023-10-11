@@ -7,7 +7,7 @@ export function DailyWeather () {
   const [days, setDays] = useState([])
   useEffect(() => {
     const days = []
-    fetch(`http://api.weatherapi.com/v1/forecast.json?key=29c1986c4b4549d7b3502419231010&q=${cityName}&days=3&aqi=no&alerts=no`)
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=29c1986c4b4549d7b3502419231010&q=${cityName}&days=3&aqi=no&alerts=no`)
       .then((res) => res.json())
       .then((data) => data.forecast.forecastday.forEach((day) => {
         days.push(day.day)
