@@ -1,0 +1,33 @@
+.daily-weather-list {
+  display: grid;
+  gap: 25px;
+}
+
+.daily-item {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 800;
+}
+
+.daily-item div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+}
+
+@media (max-width: 700px) {
+
+  .daily-item {
+    font-size: 1rem;
+  }
+
+  .daily-item div {
+    width: 250px;
+  }
+
+  * {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,25 @@
+.current-weather {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.current-weather-condition {
+  display: flex;
+  align-items: center;
+}
+
+.current-weather-details {
+  display: grid;
+  gap: 10px;
+  margin-right: 20px;
+}
+
+@media (max-width: 700px) {
+  .current-weather h2 {
+    font-size: 2rem;
+  }
+}

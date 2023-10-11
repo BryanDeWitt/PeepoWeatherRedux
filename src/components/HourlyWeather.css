@@ -1,0 +1,83 @@
+.hourly-weather-list {
+  overflow-y: scroll;
+  height: 450px;
+}
+
+.hourly-weather-list {
+  width: 500px;
+}
+
+.hourly-weather-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.hourly-weather-list li div {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hourly-weather-list li div img {
+  height: 120px;
+  width: 120px;
+}
+
+@media (max-width: 700px) {
+  .hourly-weather-list {
+    width: 300px;
+  }
+
+  .hourly-weather-list li {
+    font-size: 1rem;
+  }
+
+  .hourly-weather-list li div img {
+    height: 70px;
+    width: 70px;
+  }
+}
+
+/* Hide the default scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track (the empty space around the thumb) */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Thumb (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  /* Color of the thumb */
+  border-radius: 6px;
+  /* Rounded corners */
+}
+
+/* On hover, the thumb color */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Add some padding to the track */
+::-webkit-scrollbar-track-piece {
+  margin: 2px;
+}
+
+/* Set the width of the thumb for horizontal scrollbar */
+::-webkit-scrollbar-thumb:horizontal {
+  width: 12px;
+}
+
+/* Set the height of the thumb for vertical scrollbar */
+::-webkit-scrollbar-thumb:vertical {
+  height: 12px;
+}
