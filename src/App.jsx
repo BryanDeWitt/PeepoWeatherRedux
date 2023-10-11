@@ -14,7 +14,7 @@ function App () {
 
   useEffect(() => {
     if (cityName) {
-      fetch(`http://api.weatherapi.com/v1/current.json?key=29c1986c4b4549d7b3502419231010&q=${cityName}&aqi=no`)
+      fetch(`https://api.weatherapi.com/v1/current.json?key=29c1986c4b4549d7b3502419231010&q=${cityName}&aqi=no`)
         .then((res) => {
           if (!res.ok) {
             throw new Error('Network response was not ok')

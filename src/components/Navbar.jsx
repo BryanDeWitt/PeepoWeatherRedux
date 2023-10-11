@@ -11,7 +11,7 @@ export function Navbar () {
 
   const handleChange = useCallback((e) => {
     const cities = []
-    fetch(`http://api.weatherapi.com/v1/search.json?key=29c1986c4b4549d7b3502419231010&q=${e.target.value}`)
+    fetch(`https://api.weatherapi.com/v1/search.json?key=29c1986c4b4549d7b3502419231010&q=${e.target.value}`)
       .then(response => response.json())
       .then(data => {
         data?.forEach(city => {
