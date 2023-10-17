@@ -18,13 +18,13 @@ export function CurrentWeather ({ weather, error }) {
         <h2>
           {weather.location.name}, {weather.location.country}
           <br />
-          {weather.location.localtime.split(' ')[1]} <span>{weather.current.temp_c}°C</span>
+          {weather.location.localtime.split(' ')[1]}, {weather.current.temp_c}°C
         </h2>
         <div className='current-weather-condition'>
           <h3>
             {weather.current.condition.text}
           </h3>
-          <img src={weather.current.condition.icon} width={50} height={50} alt='' />
+          <img src={weather.current.condition.icon} width={100} height={100} alt='' />
         </div>
         <div className='current-weather-details'>
           <p>Feels like: {weather.current.feelslike_c}°C</p>

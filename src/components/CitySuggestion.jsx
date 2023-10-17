@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { CityContext } from '../context/City'
 
-export function CitySuggestion () {
+export function CitySuggestion ({ setSubmit }) {
   const { setCityName, cities, handleReset } = useContext(CityContext)
 
   const handleClick = (cityName) => {
@@ -14,10 +14,11 @@ export function CitySuggestion () {
         <li
           onClick={() => {
             handleClick(city.name)
+            setSubmit(true)
           }}
           key={city.id}
         >
-          {`${city.name} ${city.region}`}
+          {`${city.name} ${city.country}`}
         </li>
       ))}
     </ul>

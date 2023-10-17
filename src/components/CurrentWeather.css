@@ -22,4 +22,9 @@
   .current-weather h2 {
     font-size: 2rem;
   }
+
+  .current-weather p,
+  .current-weather h3 {
+    font-size: 1.5rem;
+  }
 }

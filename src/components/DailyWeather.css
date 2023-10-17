@@ -1,6 +1,7 @@
 .daily-weather-list {
   display: grid;
   gap: 25px;
+  place-content: center;
 }
 
 .daily-item {
@@ -27,7 +28,7 @@
     width: 250px;
   }
 
-  * {
-    font-size: 1rem;
+  .daily-weather-list {
+    width: 100vw;
   }
 }
