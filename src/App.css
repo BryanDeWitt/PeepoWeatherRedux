@@ -1,3 +1,7 @@
+main::-webkit-scrollbar {
+  display: none;
+}
+
 .section-container section {
   height: 600px;
   width: 600px;
@@ -12,11 +16,10 @@
   font-size: 1.5rem;
   gap: 50px;
   text-align: center;
-
 }
 
 .container {
-  margin-top: 120px;
+  margin-top: 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,12 +53,20 @@
   cursor: pointer;
 }
 
+footer {
+  text-align: center;
+  color: white;
+  padding-top: 20px;
+}
+
+footer a {
+  color: rgb(3, 255, 234);
+  text-decoration: none;
+}
+
 
 @media (max-width: 700px) {
 
-  .container {
-    margin-top: 170px;
-  }
 
   .section-container section {
     width: 100vw;

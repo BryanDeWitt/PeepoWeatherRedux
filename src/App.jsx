@@ -82,6 +82,9 @@ function App () {
           }
         </div>
       </div>
+      <footer>
+        Powered by <a href='https://www.weatherapi.com/' title='Free Weather API'>WeatherAPI.com</a>
+      </footer>
     </main>
   )
 }
