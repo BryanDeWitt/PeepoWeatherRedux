@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { CityContext } from '../context/City'
+import { CityContext } from '../context/CityContext'
 
 export function CitySuggestion ({ setSubmit }) {
   const { setCityName, cities, handleReset } = useContext(CityContext)

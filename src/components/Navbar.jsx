@@ -1,37 +1,35 @@
 import { useState, useCallback, useContext, useEffect } from 'react'
-import { MagnifyingGlass } from './Icons.jsx'
+import { MagnifyingGlass, Cloud } from './Icons.jsx'
 import './Navbar.css'
 import debounce from 'just-debounce-it'
-import { CityContext } from '../context/City.jsx'
+import { CityContext } from '../context/CityContext.jsx'
 import { CitySuggestion } from './CitySuggestion.jsx'
 
 export function Navbar () {
   const { setCityName, setCities, cities } = useContext(CityContext)
   const [submit, setSubmit] = useState(false)
-  const debounceSearch = useCallback(debounce((e) => handleChange(e), 300))
+  const debounceSearch = useCallback(debounce((e) => handleChange(e), 250))
 
-  const handleChange = useCallback((e) => {
+  const handleChange = (e) => {
     const cities = []
-    fetch(`https://api.weatherapi.com/v1/search.json?key=29c1986c4b4549d7b3502419231010&q=${e.target.value}`)
-      .then(response => response.json())
-      .then(data => {
-        if (data.length > 0) {
-          data.forEach(city => {
-            cities.push(city)
-          })
-        }
-      }).then(() => {
-        setCities(cities)
-      })
-      .catch(error => console.log(error))
-  })
+    if (e.target.value.length > 2) {
+      fetch(`https://api.weatherapi.com/v1/search.json?key=29c1986c4b4549d7b3502419231010&q=${e.target.value}`)
+        .then(response => response.json())
+        .then(data => {
+          if (data.length > 0) {
+            data.forEach(city => {
+              cities.push(city)
+            })
+          }
+        }).then(() => {
+          setCities(cities)
+        })
+        .catch(error => console.log(error))
+    }
+  }
 
   const capitalize = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1)
-  }
-
-  const resetInput = (e) => {
-    e.target.cityName.value = ''
   }
 
   useEffect(() => {
@@ -44,7 +42,7 @@ export function Navbar () {
 
   return (
     <nav>
-      <h1>Peepo Weather</h1>
+      <h1><Cloud />Peepo Weather</h1>
       <form onSubmit={(e) => {
         e.preventDefault()
         setCityName(capitalize(e.target.cityName.value))
@@ -57,7 +55,7 @@ export function Navbar () {
           </button>
           {
         cities.length > 0 &&
-          <CitySuggestion resetInput={resetInput} setSubmit={setSubmit} />
+          <CitySuggestion setSubmit={setSubmit} />
         }
         </label>
       </form>

@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { CityContext } from '../context/City'
+import { CityContext } from '../context/CityContext'
 import './CurrentWeather.css'
 
 export function CurrentWeather ({ weather, error }) {

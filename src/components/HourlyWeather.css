@@ -25,8 +25,8 @@
 }
 
 .hourly-weather-list li div img {
-  height: 120px;
-  width: 120px;
+  height: 100px;
+  width: 100px;
 }
 
 @media (max-width: 700px) {
@@ -46,7 +46,7 @@
 
 /* Hide the default scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 
 /* Track (the empty space around the thumb) */
@@ -65,19 +65,4 @@
 /* On hover, the thumb color */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
-}
-
-/* Add some padding to the track */
-::-webkit-scrollbar-track-piece {
-  margin: 2px;
-}
-
-/* Set the width of the thumb for horizontal scrollbar */
-::-webkit-scrollbar-thumb:horizontal {
-  width: 12px;
-}
-
-/* Set the height of the thumb for vertical scrollbar */
-::-webkit-scrollbar-thumb:vertical {
-  height: 12px;
 }

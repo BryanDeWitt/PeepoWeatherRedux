@@ -12,14 +12,15 @@
   font-size: 1.5rem;
   gap: 50px;
   text-align: center;
+
 }
 
 .container {
+  margin-top: 120px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
 }
 
 .section-container {
@@ -33,7 +34,6 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid rgb(139, 139, 139);
-  margin-top: 15px;
 }
 
 .tabs p {
@@ -52,9 +52,14 @@
 
 
 @media (max-width: 700px) {
+
+  .container {
+    margin-top: 170px;
+  }
+
   .section-container section {
     width: 100vw;
-    height: 70vh;
+    height: 500px;
   }
 
   .tabs {
