@@ -3,7 +3,7 @@ import { createContext, useState } from 'react'
 export const CityContext = createContext()
 
 export const CityProvider = ({ children }) => {
-  const [cityName, setCityName] = useState('Minas')
+  const [cityName, setCityName] = useState(window.localStorage.getItem('cityName') || 'Montevideo')
   const [cities, setCities] = useState([])
 
   const handleReset = () => {

@@ -47,6 +47,7 @@ export function Navbar () {
         e.preventDefault()
         setCityName(capitalize(e.target.cityName.value))
         setSubmit(true)
+        window.localStorage.setItem('cityName', capitalize(e.target.cityName.value))
       }}
       >
         <label>Find your city: <input name='cityName' type='text' placeholder='Minas... , Tokyo...' onChange={debounceSearch} />

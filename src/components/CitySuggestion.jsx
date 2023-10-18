@@ -15,6 +15,7 @@ export function CitySuggestion ({ setSubmit }) {
           onClick={() => {
             handleClick(city.name)
             setSubmit(true)
+            window.localStorage.setItem('cityName', city.name)
           }}
           key={city.id}
         >
