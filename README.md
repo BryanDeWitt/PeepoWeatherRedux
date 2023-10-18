@@ -1,4 +1,4 @@
-Planificacion para empezar a trabajar
+Planificacion para empezar a trabajar /n
 0.5: crear un json con ejemplos de respuestas de la API ✅
 0.7: acordarse como usar el time epoch xd (no era necesario al final)
 1: averiguar como se usar el autocomplete con una llamada a la api para que muestre el resultado ✅
