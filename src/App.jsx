@@ -10,7 +10,7 @@ import { setWallpaper } from './utils/functions.js'
 
 function App () {
   const { handleReset } = useContext(CityContext)
-  const { weather, error } = useCurrentWeather()
+  const { weather, error, loading } = useCurrentWeather()
 
   const [tab, setTab] = useState(0)
 
@@ -62,22 +62,19 @@ function App () {
           {
           tab === 0 &&
             <section>
-              {weather &&
-                <CurrentWeather error={error} weather={weather} />}
+              <CurrentWeather error={error} weather={weather} loading={loading} />
             </section>
           }
           {
             tab === 1 &&
               <section>
-                {weather &&
-                  <HourlyWeather time={time} />}
+                <HourlyWeather error={error} time={time} />
               </section>
           }
           {
             tab === 2 &&
               <section>
-                {weather &&
-                  <DailyWeather />}
+                <DailyWeather error={error} />
               </section>
           }
         </div>

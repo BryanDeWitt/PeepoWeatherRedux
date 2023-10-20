@@ -1,9 +1,24 @@
 import uuid from 'react-uuid'
 import './DailyWeather.css'
 import { useDailyWeather } from '../hooks/useDailyWeather.jsx'
+import { CityContext } from '../context/CityContext.jsx'
+import { useContext } from 'react'
 
-export function DailyWeather () {
-  const { days, dayName } = useDailyWeather()
+export function DailyWeather ({ error }) {
+  const { days, dayName, dailyLoad } = useDailyWeather()
+  const { cityName } = useContext(CityContext)
+  if (error) {
+    return <h2>{error}</h2>
+  }
+
+  if (!cityName) {
+    return <h2>City not found</h2>
+  }
+
+  if (dailyLoad) {
+    return <h2>Loading...</h2>
+  }
+
   return (
     <ul className='daily-weather-list'>
       {

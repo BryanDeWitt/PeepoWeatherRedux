@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { CityContext } from '../context/CityContext'
 import './CurrentWeather.css'
 
-export function CurrentWeather ({ weather, error }) {
+export function CurrentWeather ({ weather, error, loading }) {
   const { cityName } = useContext(CityContext)
   if (error) {
     return <h2>{error}</h2>
@@ -10,6 +10,10 @@ export function CurrentWeather ({ weather, error }) {
 
   if (!cityName) {
     return <h2>City not found</h2>
+  }
+
+  if (loading) {
+    return <h2>Loading...</h2>
   }
 
   if (weather) {
