@@ -16,7 +16,7 @@ export function useHourlyWeather ({ time }) {
         return res.json()
       })
       .then((data) => {
-        const twientyFourHours = data.forecast.forecastday[0].hour.slice(parseInt(time.split(':')[0]), 23).concat(data.forecast.forecastday[0].hour.slice(0, parseInt(time.split(':')[0]) + 1))
+        const twientyFourHours = data.forecast.forecastday[0].hour.slice(parseInt(time.split(':')[0]), 23).concat(data.forecast.forecastday[1].hour.slice(0, parseInt(time.split(':')[0]) + 1))
         setHours(twientyFourHours)
         setHourlyLoad(false)
       })
