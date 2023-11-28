@@ -32,19 +32,19 @@ export function CurrentWeather ({ weather, error, loading }) {
         </div>
         <div className='current-weather-details'>
           <div className='details-cards'>
-            <img src='/feelsLike.png' alt='Feels like Icon' />
+            <img src='./feelsLike.png' alt='Feels like Icon' />
             <p>Feels like: {weather.current.feelslike_c}°C</p>
           </div>
           <div className='details-cards'>
-            <img src='/wind.png' alt='Wind velocity icon' />
+            <img src='./wind.png' alt='Wind velocity icon' />
             <p>Wind: {weather.current.wind_kph}km/h</p>
           </div>
           <div className='details-cards'>
-            <img src='/humidity.png' alt='Humidity icon' />
+            <img src='./humidity.png' alt='Humidity icon' />
             <p>Humidity: {weather.current.humidity}%</p>
           </div>
           <div className='details-cards'>
-            <img src='/visibility.png' alt='Visibility icon' />
+            <img src='./visibility.png' alt='Visibility icon' />
             <p>Visibility: {weather.current.vis_km}km</p>
           </div>
         </div>
