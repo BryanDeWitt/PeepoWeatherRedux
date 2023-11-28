@@ -12,6 +12,7 @@
   border-radius: 10px;
   margin-bottom: 15px;
   height: 550px;
+  min-width: 500px
 }
 
 .current-weather-condition {
