@@ -6,8 +6,8 @@ Planificacion para empezar a trabajar
 3: estilos basicos, fondo, barra de busqueda fachera, iconos usar los que vienen ✅  
 4: si es de noche (a partir de cierta hora) mostrar fondo nocturno, si es de dia fondo claro ✅  
 5: mostrar los resultados con los iconos que viene por defecto la respuesta de la API ✅  
-6: poner 2 barras para renderizar diferentes patrones de busqueda 1 para el clima por dia,  otro para el clima por hora ✅ (al final fueron 3)  
-7: mostrar solo las horas que le quedan a ese dia: Ejemplo: si son las 00: mostrar los 24 resultados para cada hora, si son las 22, mostrar solo 2 ✅  
+6: poner 2 barras para renderizar diferentes patrones de busqueda 1 para el clima por dia,  otro para el clima por hora 
+7: mostrar prediccion 24 horas ✅ 
 
 Esta es una app del clima que usa la api de https://www.weatherapi.com/.  
 La simplicidad fue mi objetivo en el diseño, tiene diferentes fondos para: amanecer, dia, anochecer y noche.  
