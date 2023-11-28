@@ -9,6 +9,8 @@
 
 .hourly-weather-list li {
   display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 5px;
   color: white;
   font-size: 1.2rem;
@@ -31,11 +33,13 @@
 
 @media (max-width: 700px) {
   .hourly-weather-list {
-    width: 100%;
+    width: 90%;
+    justify-content: center;
   }
 
   .hourly-weather-list li {
     font-size: 1.2rem;
+    min-width: 300px;
   }
 
   .hourly-weather-list li div img {

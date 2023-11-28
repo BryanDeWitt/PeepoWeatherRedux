@@ -11,13 +11,13 @@ export function HourlyWeather ({ error, time }) {
   }
 
   if (!cityName) {
-    return <h2>City not found</h2>
+    return <h2 style={{ color: 'White' }}>City not found</h2>
   }
 
   const { hours, hourlyLoad } = useHourlyWeather({ time })
 
   if (hourlyLoad) {
-    return <h2>Loading...</h2>
+    return <h2 style={{ color: 'White' }}>Loading...</h2>
   }
   return (
     <ul className='hourly-weather-list'>

@@ -2,6 +2,13 @@ main::-webkit-scrollbar {
   display: none;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
 
 
 .section-container section {
@@ -57,6 +64,8 @@ footer {
   text-align: center;
   color: white;
   padding-top: 20px;
+  width: 100vw;
+  padding-bottom: 15px;
 }
 
 footer a {

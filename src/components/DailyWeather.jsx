@@ -12,11 +12,19 @@ export function DailyWeather ({ error }) {
   }
 
   if (!cityName) {
-    return <h2>City not found</h2>
+    return (
+      <div className='daily-weather-list'>
+        <h2>Please select a city</h2>
+      </div>
+    )
   }
 
   if (dailyLoad) {
-    return <h2>Loading...</h2>
+    return (
+      <div className='daily-weather-list'>
+        <h2>Loading...</h2>
+      </div>
+    )
   }
 
   return (

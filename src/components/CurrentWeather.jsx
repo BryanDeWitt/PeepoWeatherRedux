@@ -14,11 +14,19 @@ export function CurrentWeather ({ weather, error, loading }) {
   }
 
   if (!cityName) {
-    return <h2>City not found</h2>
+    return (
+      <div className='current-weather'>
+        <h2>City not found</h2>
+      </div>
+    )
   }
 
   if (loading) {
-    return <h2>Loading...</h2>
+    return (
+      <div className='current-weather'>
+        <h2>Loading...</h2>
+      </div>
+    )
   }
 
   if (weather) {
