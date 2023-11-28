@@ -38,41 +38,31 @@ function App () {
     >
       <Navbar />
       <div className='container'>
-        <div className='tabs'>
-          <p
-            style={tab === 0 ? tabSelectedStyle : null}
-            onClick={() => setTab(0)}
-          >
-            Current
-          </p>
-          <p
-            style={tab === 1 ? tabSelectedStyle : null}
-            onClick={() => setTab(1)}
-          >
-            Hourly
-          </p>
-          <p
-            style={tab === 2 ? tabSelectedStyle : null}
-            onClick={() => setTab(2)}
-          >
-            Daily
-          </p>
-        </div>
+        <CurrentWeather error={error} loading={loading} weather={weather} />
+
         <div className='section-container'>
+          <div className='tabs'>
+            <p
+              style={tab === 0 ? tabSelectedStyle : null}
+              onClick={() => setTab(0)}
+            >
+              24 Hours
+            </p>
+            <p
+              style={tab === 1 ? tabSelectedStyle : null}
+              onClick={() => setTab(1)}
+            >
+              3 Days
+            </p>
+          </div>
           {
-          tab === 0 &&
-            <section>
-              <CurrentWeather error={error} weather={weather} loading={loading} />
-            </section>
-          }
-          {
-            tab === 1 &&
+            tab === 0 &&
               <section>
                 <HourlyWeather error={error} time={time} />
               </section>
           }
           {
-            tab === 2 &&
+            tab === 1 &&
               <section>
                 <DailyWeather error={error} />
               </section>
@@ -80,10 +70,7 @@ function App () {
         </div>
       </div>
       <footer>
-        Powered by
-        <a href='https://www.weatherapi.com/' title='Free Weather API' target='_blank' rel='noreferrer'>
-          WeatherAPI.com
-        </a>
+        Powered by <a href='https://www.weatherapi.com/' title='Free Weather API' target='_blank' rel='noreferrer'>WeatherAPI.com</a>
       </footer>
     </main>
   )

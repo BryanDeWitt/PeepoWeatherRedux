@@ -15,16 +15,9 @@ export function useHourlyWeather ({ time }) {
         return res.json()
       })
       .then((data) => {
-        if (parseInt(data.location.localtime.split(' ')[1].split(':')[0]) === 23) {
-          const restHours = data.forecast.forecastday[1].hour
-          setHours(restHours)
-        } else {
-          const restHours = data.forecast.forecastday[0].hour.filter((hour) => {
-            return parseInt(hour.time.split(' ')[1].split(':')[0]) > parseInt(time)
-          })
-          setHours(restHours)
-          setHourlyLoad(false)
-        }
+        const twientyFourHours = data.forecast.forecastday[0].hour.slice(parseInt(time.split(':')[0]), 23).concat(data.forecast.forecastday[0].hour.slice(0, parseInt(time.split(':')[0]) + 1))
+        setHours(twientyFourHours)
+        setHourlyLoad(false)
       })
       .catch(err => {
         setHourlyLoad(false)

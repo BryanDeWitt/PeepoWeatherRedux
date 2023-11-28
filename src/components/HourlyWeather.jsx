@@ -26,7 +26,7 @@ export function HourlyWeather ({ error, time }) {
             return (
               <li key={uuid()}>
                 <div>
-                  {hour.time.split(' ')[1]}
+                  <p style={{ width: '100%' }}>{hour.time.split(' ')[1]}</p>
                   <img src={hour.condition.icon} alt={hour.condition.text} />
                 </div>
                 <div>
