@@ -1,9 +1,9 @@
 import { useContext } from 'react'
 import { CityContext } from '../context/CityContext'
-import feelsLikeIcon from './feelsLike.png'
-import windIcon from './wind.png'
-import humidityIcon from './humidity.png'
-import visibilityIcon from './visibility.png'
+import feelsLikeIcon from '../icons/feelsLike.png'
+import windIcon from '../icons/wind.png'
+import humidityIcon from '../icons/humidity.png'
+import visibilityIcon from '../icons/visibility.png'
 import './CurrentWeather.css'
 
 export function CurrentWeather ({ weather, error, loading }) {
