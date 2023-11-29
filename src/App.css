@@ -40,7 +40,7 @@ main {
 
 .tabs {
   display: flex;
-  max-width: 600px;
+  width: 600px;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid rgb(139, 139, 139);
@@ -80,17 +80,18 @@ footer a {
     display: flex;
   }
 
+  .container {
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 600px) {
   .section-container section {
     width: 100vw;
-    height: 500px;
   }
 
   .tabs {
     width: 100vw;
   }
-
-  .container {
-    flex-direction: column;
-  }
-
 }

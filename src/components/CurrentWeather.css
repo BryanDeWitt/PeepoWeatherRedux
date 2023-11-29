@@ -12,7 +12,7 @@
   border-radius: 10px;
   margin-bottom: 15px;
   height: 550px;
-  min-width: 500px
+  width: 500px
 }
 
 .current-weather-condition {
@@ -44,10 +44,6 @@
 
 
 @media (max-width: 700px) {
-
-  .current-weather {
-    width: 100vw;
-  }
 
   .current-weather h2 {
     font-size: 2rem;
