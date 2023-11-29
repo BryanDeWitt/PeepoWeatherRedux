@@ -12,8 +12,8 @@ main {
 
 
 .section-container section {
-  height: 600px;
-  width: 600px;
+  min-height: 650px;
+  max-width: 600px;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -40,7 +40,7 @@ main {
 
 .tabs {
   display: flex;
-  width: 600px;
+  max-width: 600px;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid rgb(139, 139, 139);
@@ -74,7 +74,7 @@ footer a {
 }
 
 
-@media (max-width: 700px) {
+@media (max-width: 1150px) {
 
   main::-webkit-scrollbar {
     display: flex;
