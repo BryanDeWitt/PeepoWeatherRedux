@@ -4,8 +4,9 @@ import './Navbar.css'
 import debounce from 'just-debounce-it'
 import { CityContext } from '../context/CityContext.jsx'
 import { CitySuggestion } from './CitySuggestion.jsx'
+import { apiKey } from '../../config/apiKey.js'
 
-export function Navbar () {
+export function Navbar() {
   const { setCityName, setCities, cities } = useContext(CityContext)
   const [submit, setSubmit] = useState(false)
   const debounceSearch = useCallback(debounce((e) => handleChange(e), 250))
@@ -13,7 +14,7 @@ export function Navbar () {
   const handleChange = (e) => {
     const cities = []
     if (e.target.value.length > 2) {
-      fetch(`https://api.weatherapi.com/v1/search.json?key=29c1986c4b4549d7b3502419231010&q=${e.target.value}`)
+      fetch(`https://api.weatherapi.com/v1/search.json?key=${apiKey}&q=${e.target.value}`)
         .then(response => response.json())
         .then(data => {
           if (data.length > 0) {
@@ -55,9 +56,9 @@ export function Navbar () {
             <MagnifyingGlass />
           </button>
           {
-        cities.length > 0 &&
-          <CitySuggestion setSubmit={setSubmit} />
-        }
+            cities.length > 0 &&
+            <CitySuggestion setSubmit={setSubmit} />
+          }
         </label>
       </form>
     </nav>
